@@ -10,7 +10,8 @@ packages = [{ include = "etl" }]
 python = ">=3.9,<3.10"
 
 # HTTP download
-requests = "^2.31.0"
+# requests = "^2.31.0"
+requests = "==2.25.1"
 
 # Configuration & validation
 pydantic = "^2.6.0"

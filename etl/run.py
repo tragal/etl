@@ -7,11 +7,11 @@ from etl.phases.transform import transform
 from etl.phases.load import load
 
 
-def run_etl(run_id: str, pipeline_name: str):
-    pipeline = load_pipeline(pipeline_name)
-
-    for phase_name, phase_fn in pipeline:
-        run_phase(run_id, phase_name, phase_fn)
+# def run_etl(run_id: str, pipeline_name: str):
+#     pipeline = load_pipeline(pipeline_name)
+#
+#     for phase_name, phase_fn in pipeline:
+#         run_phase(run_id, phase_name, phase_fn)
 
 
 
