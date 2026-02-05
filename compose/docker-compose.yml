@@ -16,17 +16,18 @@ services:
         context: ..
         dockerfile: compose/Dockerfile
     container_name: etl-runner
-    depends_on:
-      - postgres
-    environment:
-      ETL_DATABASE_URL: postgresql+psycopg2://etl:etl@postgres:5432/etl
-      ETL_CHUNK_SIZE: 1000
+#    depends_on:
+#      - postgres
+#    environment:
+#      ETL_DATABASE_URL: postgresql+psycopg2://etl:etl@postgres:5432/etl
+#      ETL_CHUNK_SIZE: 1000
     volumes:
-      - ./data:/tmp/etl
-      - ./etl:/etl
+      - ../data:/data
+      - ../src:/opt/app-root/src:rw
     # command: ["run", "--run-id=local-test"]
     tty: true
-    command: [ "tail", "-f", "/dev/null" ]
+    # command: [ "tail", "-f", "/dev/null" ]
+    command: [ "sleep", "infinity" ]
 
 volumes:
   pgdata:

@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "etl-service"
+name = "etl"
 version = "0.1.0"
 description = "Resumable ETL service (download, extract, transform, load)"
 authors = ["Your Team <team@example.com>"]
