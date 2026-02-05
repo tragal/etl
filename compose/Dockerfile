@@ -1,8 +1,8 @@
 FROM registry.access.redhat.com/ubi9/python-39
 
 # WORKDIR /opt/app-root/src/
-RUN printf 'Current directory: %s\n' "$(pwd)"
-RUN printf 'Contents of %s:\n' "$(pwd)" && ls -la
+# RUN printf 'Current directory: %s\n' "$(pwd)"
+# RUN printf 'Contents of %s:\n' "$(pwd)" && ls -la
 
 # Build as root (required for native deps)
 USER root
