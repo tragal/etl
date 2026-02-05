@@ -21,6 +21,8 @@ services:
     environment:
       ETL_DATABASE_URL: postgresql+psycopg2://etl:etl@postgres:5432/etl
       ETL_CHUNK_SIZE: 1000
+      ETL_TEMP_DIR: /data
+      ETL_REQUEST_TIMEOUT: 1000
     volumes:
       - ../data:/data
       - ../src:/opt/app-root/src:rw
