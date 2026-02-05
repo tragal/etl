@@ -7,4 +7,8 @@ engine = create_engine(
     pool_pre_ping=True,
 )
 
+# Create session factory
 Session = sessionmaker(bind=engine)
+
+# Create tables
+# Base.metadata.create_all(engine)
