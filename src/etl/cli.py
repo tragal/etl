@@ -6,7 +6,6 @@ app = typer.Typer()
 
 @app.command()
 def run(run_id: str):
-    print(f"run_id={run_id}")
     run_etl(run_id)
 
 
