@@ -10,3 +10,15 @@ alembic init alembic
 alembic revision --autogenerate -m "initial tables"
 alembic upgrade head
 alembic downgrade -1
+
+
+cd etl
+
+# Migrate primary database
+alembic upgrade head
+
+# Migrate sales database
+alembic -x db=sales_replica upgrade head
+
+# Migrate analytics database
+alembic -x db=analytics upgrade head
