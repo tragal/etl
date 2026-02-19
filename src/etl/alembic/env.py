@@ -1,3 +1,4 @@
+# etl/alembic/env.py
 from logging.config import fileConfig
 
 from sqlalchemy import engine_from_config
@@ -7,10 +8,15 @@ from alembic import context
 
 from etl.db.models import Base
 from etl.db.database import engine
+from config.settings import settings
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config
+
+# Get target database from command line or default to primary
+target_db = context.get_x_argument(as_dictionary=True).get("db", "primary")
+
 
 # Interpret the config file for Python logging.
 # This line sets up loggers basically.
